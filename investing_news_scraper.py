@@ -4,6 +4,12 @@
 from playwright.sync_api import sync_playwright
 import json
 from datetime import datetime
+from zoneinfo import ZoneInfo
+
+utc_time = datetime.utcnow()
+broker_time = utc_time.astimezone(ZoneInfo("Asia/Beirut"))
+
+formatted = broker_time.strftime("%H:%M")
 
 def fetch_investing_calendar():
     with sync_playwright() as playwright:
@@ -38,6 +44,7 @@ def fetch_investing_calendar():
             if event and currency in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] and impact >= 2:
                 events.append({
                     "time": time,
+                    "broker_time": formatted,
                     "currency": currency,
                     "event": event,
                     "actual": actual,
