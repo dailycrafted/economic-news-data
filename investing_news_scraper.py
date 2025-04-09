@@ -8,6 +8,7 @@ def fetch_investing_calendar():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto("https://www.investing.com/economic-calendar/", timeout=120000, wait_until="domcontentloaded")
+        page.wait_for_timeout(5000)  # 5 seconds pause
 
         # Accept cookies if popup appears
         try:
