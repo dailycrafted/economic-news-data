@@ -1,49 +1,50 @@
 # investing_news_scraper.py
-# Fetch daily economic events from Investing.com hidden endpoint and save as news_schedule.json
-
-import requests
-import re
 import json
 from datetime import datetime
+from playwright.sync_api import sync_playwright
 
 def fetch_investing_calendar():
-    url = "https://ec.forexprostools.com/"
-    params = {
-        "columns": "exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous,exc_country,exc_name,exc_time",
-        "importance": "1,2,3",
-        "countries": "5,6,7,14,17,22,26,32,37,72",  # US, EU, UK, etc
-        "calType": "day",
-        "timezone": "60",
-        "lang": "1"
-    }
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.goto("https://www.investing.com/economic-calendar/", timeout=60000)
 
-    response = requests.get(url, params=params)
-    if response.status_code != 200:
-        raise Exception("Failed to fetch data")
+        # Accept cookies if popup appears
+        try:
+            page.click('button:has-text("I Accept")', timeout=5000)
+        except:
+            pass
 
-    raw_text = response.text
-    json_str = re.search(r'\((\[.*\])\)', raw_text).group(1)
-    data = json.loads(json_str)
+        page.wait_for_selector(".economicCalendar", timeout=15000)
 
-    events = []
-    for item in data:
-        events.append({
-            "Event": item[7],
-            "Country": item[6],
-            "Currency": item[1],
-            "Impact": ["Low", "Medium", "High"][int(item[2]) - 1],
-            "Actual": item[3],
-            "Forecast": item[4],
-            "Previous": item[5],
-            "Date": datetime.today().strftime("%Y-%m-%d"),
-            "Time": item[8],
-            "Pair": "XAUUSD"
-        })
+        events = []
 
-    with open("news_schedule.json", "w", encoding="utf-8") as f:
-        json.dump(events, f, indent=2)
+        rows = page.query_selector_all("tr.js-event-item")
+        for row in rows:
+            time = row.query_selector(".time")?.inner_text().strip()
+            currency = row.query_selector(".left flagCur")?.inner_text().strip()
+            event_name = row.query_selector(".event")?.inner_text().strip()
+            impact = len(row.query_selector_all(".grayFullBullishIcon"))  # 1–3
+            actual = row.query_selector(".act")?.inner_text().strip()
+            forecast = row.query_selector(".fore")?.inner_text().strip()
+            previous = row.query_selector(".prev")?.inner_text().strip()
 
-    print(f"✅ Saved {len(events)} events to news_schedule.json")
+            if time and currency and event_name:
+                events.append({
+                    "datetime": time,
+                    "currency": currency,
+                    "event": event_name,
+                    "impact": impact,
+                    "actual": actual,
+                    "forecast": forecast,
+                    "previous": previous
+                })
+
+        browser.close()
+        return events
 
 if __name__ == "__main__":
-    fetch_investing_calendar()
+    events = fetch_investing_calendar()
+    today = datetime.today().strftime("%Y-%m-%d")
+    with open("news_schedule.json", "w", encoding="utf-8") as f:
+        json.dump({"date": today, "events": events}, f, indent=2, ensure_ascii=False)
