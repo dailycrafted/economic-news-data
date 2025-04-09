@@ -23,12 +23,23 @@ def fetch_investing_calendar():
         for row in rows:
             time_element = row.query_selector(".time")
             time = time_element.inner_text().strip() if time_element else ""
-            currency = row.query_selector(".left flagCur")?.inner_text().strip()
-            event_name = row.query_selector(".event")?.inner_text().strip()
+
+            currency_element = row.query_selector(".left.flagCur")
+            currency = currency_element.inner_text().strip() if currency_element else ""
+
+            event_element = row.query_selector(".event")
+            event_name = event_element.inner_text().strip() if event_element else ""
+
             impact = len(row.query_selector_all(".grayFullBullishIcon"))  # 1–3
-            actual = row.query_selector(".act")?.inner_text().strip()
-            forecast = row.query_selector(".fore")?.inner_text().strip()
-            previous = row.query_selector(".prev")?.inner_text().strip()
+
+            actual_element = row.query_selector(".act")
+            actual = actual_element.inner_text().strip() if actual_element else ""
+
+            forecast_element = row.query_selector(".fore")
+            forecast = forecast_element.inner_text().strip() if forecast_element else ""
+
+            previous_element = row.query_selector(".prev")
+            previous = previous_element.inner_text().strip() if previous_element else ""
 
             if time and currency and event_name:
                 events.append({
