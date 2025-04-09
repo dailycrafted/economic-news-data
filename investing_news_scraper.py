@@ -7,7 +7,7 @@ def fetch_investing_calendar():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
-        page.goto("https://www.investing.com/economic-calendar/", timeout=60000)
+        page.goto("https://www.investing.com/economic-calendar/", timeout=120000, wait_until="domcontentloaded")
 
         # Accept cookies if popup appears
         try:
