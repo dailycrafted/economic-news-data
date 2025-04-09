@@ -3,12 +3,8 @@
 
 from playwright.sync_api import sync_playwright
 import json
-from datetime import datetime
+from datetime import datetime, date
 from zoneinfo import ZoneInfo
-
-# Example: convert each event time from UTC to broker time
-today = datetime.utcnow().date()
-broker_timezone = ZoneInfo("Europe/Berlin")  # Replace with your broker's time zone
 
 def fetch_investing_calendar():
     with sync_playwright() as playwright:
@@ -22,6 +18,9 @@ def fetch_investing_calendar():
         print(f"📊 Found {len(rows)} economic calendar rows.")
 
         events = []
+        # Example: convert each event time from UTC to broker time
+        today = datetime.utcnow().date()
+        broker_timezone = ZoneInfo("Europe/Berlin")  # Replace with your broker's time zone
 
         for row in rows:
             time_el = row.query_selector(".js-time")
@@ -40,9 +39,14 @@ def fetch_investing_calendar():
             previous = previous_el.inner_text().strip() if previous_el else ""
             impact = len(impact_icons)
             
+            # Apply filters (optional): only high/medium impact USD/EUR/GBP/JPY/CAD/AUD/NZD/CHF events
+            if not event or currency not in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] or impact < 2:
+                continue
+
+            # Convert to broker time and add timestamp
             try:
                 # Combine date + time string into full datetime
-                event_dt_utc = datetime.strptime(f"{today} {time}", "%Y-%m-%d %H:%M")
+                event_dt_utc = datetime.strptime(f"{today} {time}", "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("UTC"))
                 event_dt_broker = event_dt_utc.astimezone(broker_timezone)
 
                 # Add both formatted and UNIX timestamp
@@ -53,8 +57,7 @@ def fetch_investing_calendar():
                 print("⚠️ Time conversion failed:", e)
                 broker_time_str = ""
                 event_timestamp = 0
-            
-            if event and currency in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] and impact >= 2:
+                
                 events.append({
                     "time": time,
                     "broker_time": broker_time_str,  # Converted
