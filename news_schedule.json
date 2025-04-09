@@ -2,8 +2,8 @@
   "date": "2025-04-09",
   "events": [
     {
-      "time": "05:25",
-      "broker_time": "07:25",
+      "time": "19:25",
+      "broker_time": "21:25",
       "timestamp": 1744176300,
       "currency": "EUR",
       "event": "German Buba Balz Speaks",
@@ -13,8 +13,8 @@
       "impact": 2
     },
     {
-      "time": "10:30",
-      "broker_time": "12:30",
+      "time": "20:30",
+      "broker_time": "22:30",
       "timestamp": 1744194600,
       "currency": "USD",
       "event": "Crude Oil Inventories",
@@ -24,8 +24,8 @@
       "impact": 3
     },
     {
-      "time": "10:30",
-      "broker_time": "12:30",
+      "time": "20:30",
+      "broker_time": "22:30",
       "timestamp": 1744194600,
       "currency": "USD",
       "event": "Cushing Crude Oil Inventories",
@@ -46,8 +46,8 @@
       "impact": 3
     },
     {
-      "time": "14:00",
-      "broker_time": "16:00",
+      "time": "23:00",
+      "broker_time": "21:00",
       "timestamp": 1744207200,
       "currency": "USD",
       "event": "FOMC Meeting Minutes",
