@@ -56,18 +56,17 @@ def fetch_investing_calendar():
                 
                 # Apply filters (optional): only high/medium impact USD/EUR/GBP/JPY/CAD/AUD/NZD/CHF events
                 if event and currency in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] and impact >= 2:
-                
-                events.append({
-                    "time": time,
-                    "broker_time": broker_time_str,  # Converted
-                    "timestamp": event_timestamp,    # For direct comparison in MT5
-                    "currency": currency,
-                    "event": event,
-                    "actual": actual,
-                    "forecast": forecast,
-                    "previous": previous,
-                    "impact": impact
-                })
+                    events.append({
+                        "time": time,
+                        "broker_time": broker_time_str,  # Converted
+                        "timestamp": event_timestamp,    # For direct comparison in MT5
+                        "currency": currency,
+                        "event": event,
+                        "actual": actual,
+                        "forecast": forecast,
+                        "previous": previous,
+                        "impact": impact
+                    })
 
         browser.close()
         return events
