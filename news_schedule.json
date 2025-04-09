@@ -2,7 +2,7 @@
   "date": "2025-04-09",
   "events": [
     {
-      "time": "00:30",
+      "time": "00:40",
       "currency": "INR",
       "event": "Cash Reserve Ratio",
       "actual": "4.00%",
@@ -11,7 +11,7 @@
       "impact": 1
     },
     {
-      "time": "00:30",
+      "time": "01:40",
       "currency": "INR",
       "event": "Interest Rate Decision",
       "actual": "6.00%",
@@ -20,7 +20,7 @@
       "impact": 2
     },
     {
-      "time": "00:30",
+      "time": "02:40",
       "currency": "INR",
       "event": "Reverse REPO Rate",
       "actual": "3.35%",
@@ -29,7 +29,7 @@
       "impact": 1
     },
     {
-      "time": "00:30",
+      "time": "03:40",
       "currency": "INR",
       "event": "RBI MPC Meeting Minutes",
       "actual": "",
@@ -38,7 +38,7 @@
       "impact": 2
     },
     {
-      "time": "01:00",
+      "time": "05:40",
       "currency": "JPY",
       "event": "Household Confidence (Mar)",
       "actual": "34.1",
@@ -47,7 +47,7 @@
       "impact": 1
     },
     {
-      "time": "02:00",
+      "time": "06:40",
       "currency": "JPY",
       "event": "Machine Tool Orders (YoY) (Mar)",
       "actual": "11.4%",
@@ -65,7 +65,7 @@
       "impact": 1
     },
     {
-      "time": "05:00",
+      "time": "07:40",
       "currency": "GBP",
       "event": "5-Year Treasury Gilt Auction",
       "actual": "",
@@ -74,7 +74,7 @@
       "impact": 1
     },
     {
-      "time": "05:25",
+      "time": "08:40",
       "currency": "EUR",
       "event": "German Buba Balz Speaks",
       "actual": "",
@@ -83,7 +83,7 @@
       "impact": 2
     },
     {
-      "time": "05:30",
+      "time": "09:40",
       "currency": "GBP",
       "event": "BoE FPC Meeting Minutes",
       "actual": "",
@@ -92,7 +92,7 @@
       "impact": 1
     },
     {
-      "time": "07:00",
+      "time": "10:40",
       "currency": "USD",
       "event": "MBA 30-Year Mortgage Rate",
       "actual": "",
@@ -101,7 +101,7 @@
       "impact": 1
     },
     {
-      "time": "07:00",
+      "time": "11:40",
       "currency": "USD",
       "event": "MBA Mortgage Applications (WoW)",
       "actual": "",
