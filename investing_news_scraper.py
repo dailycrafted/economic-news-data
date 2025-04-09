@@ -7,49 +7,37 @@ def fetch_investing_calendar():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
-        page.goto("https://www.investing.com/economic-calendar/", timeout=120000, wait_until="domcontentloaded")
-        page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=20000)
+        
+        page.goto("https://www.investing.com/economic-calendar/", timeout=60000)
+        
+        # Wait for the calendar loader to disappear (ensures the table is populated)
+        page.wait_for_selector("#economicCalendarData", timeout=30000)
 
-        # Accept cookies if popup appears
-        try:
-            page.click('button:has-text("I Accept")', timeout=5000)
-        except:
-            pass
+        # Small wait for stability
+        page.wait_for_timeout(5000)
 
+        rows = page.query_selector_all("#economicCalendarData tr")
         events = []
-
-        rows = page.query_selector_all("tr.js-event-item")
         for row in rows:
-            time_element = row.query_selector(".time")
-            time = time_element.inner_text().strip() if time_element else ""
+            if "data-event-datetime" not in row.inner_html():
+                continue
+            time = row.query_selector(".time") or ""
+            currency = row.query_selector(".left.flagCur") or ""
+            event = row.query_selector(".event") or ""
+            actual = row.query_selector(".act") or ""
+            forecast = row.query_selector(".fore") or ""
+            previous = row.query_selector(".prev") or ""
+            impact = len(row.query_selector_all(".grayFullBullishIcon"))
 
-            currency_element = row.query_selector(".left.flagCur")
-            currency = currency_element.inner_text().strip() if currency_element else ""
-
-            event_element = row.query_selector(".event")
-            event_name = event_element.inner_text().strip() if event_element else ""
-
-            impact = len(row.query_selector_all(".grayFullBullishIcon"))  # 1–3
-
-            actual_element = row.query_selector(".act")
-            actual = actual_element.inner_text().strip() if actual_element else ""
-
-            forecast_element = row.query_selector(".fore")
-            forecast = forecast_element.inner_text().strip() if forecast_element else ""
-
-            previous_element = row.query_selector(".prev")
-            previous = previous_element.inner_text().strip() if previous_element else ""
-
-            if time and currency and event_name:
-                events.append({
-                    "datetime": time,
-                    "currency": currency,
-                    "event": event_name,
-                    "impact": impact,
-                    "actual": actual,
-                    "forecast": forecast,
-                    "previous": previous
-                })
+            events.append({
+                "time": time.inner_text().strip() if time else "",
+                "currency": currency.inner_text().strip() if currency else "",
+                "event": event.inner_text().strip() if event else "",
+                "actual": actual.inner_text().strip() if actual else "",
+                "forecast": forecast.inner_text().strip() if forecast else "",
+                "previous": previous.inner_text().strip() if previous else "",
+                "impact": impact
+            })
 
         browser.close()
         return events
