@@ -2,7 +2,7 @@ name: Update Investing Calendar
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # every day at 04:00 UTC
+    - cron: '0 4 * * *'  # Every day at 04:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10.x'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
@@ -26,13 +26,10 @@ jobs:
       - name: Run news scraper
         run: python investing_news_scraper.py
 
-       - name: Commit and push debug files
-      run: |
-      git config user.name "github-actions"
-      git config user.email "github-actions@github.com"
-      git add news_schedule.json page_debug.html screenshot.png || true
-      git commit -m "🛠 Debug output from Investing.com scrape" || true
-      git push || true
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push debug files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add news_schedule.json page_debug.html screenshot.png || true
+          git commit -m "🛠 Debug output from Investing.com scrape" || true
+          git push || true
