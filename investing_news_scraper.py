@@ -42,7 +42,7 @@ def fetch_investing_calendar():
             # Convert to broker time and add timestamp
             try:
                 # Combine date + time string into full datetime
-                event_dt_utc = datetime.strptime(f"{today} {time}", "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("UTC"))
+                event_dt_utc = datetime.strptime(f"{today} {time}", "%Y-%m-%d %H:%M")
                 event_dt_broker = event_dt_utc.astimezone(broker_timezone)
 
                 # Add both formatted and UNIX timestamp
