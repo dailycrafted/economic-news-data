@@ -6,61 +6,47 @@ import json
 from datetime import datetime
 
 def fetch_investing_calendar():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+    browser = playwright.chromium.launch()
+    page = browser.new_page()
+    page.goto("https://www.investing.com/economic-calendar/", timeout=60000)
 
-        page.goto("https://www.investing.com/economic-calendar/", timeout=120000)
-        page.wait_for_timeout(5000)
+    page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=20000)
 
-        # Debug: save screenshot and HTML snapshot
-        page.screenshot(path="screenshot.png", full_page=True)
-        with open("page_debug.html", "w", encoding="utf-8") as f:
-            f.write(page.content())
+    rows = page.query_selector_all("tr.js-event-item")
+    print(f"📊 Found {len(rows)} economic calendar rows.")
 
-        # Wait for table or rows
-        try:
-            page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable", timeout=20000)
-        except:
-            print("❌ Failed to locate economic calendar table.")
-            browser.close()
-            return []
+    events = []
 
-        rows = page.query_selector_all("tr.js-event-item")
-print(f"📊 Found {len(rows)} economic calendar rows.")
+    for row in rows:
+        time_el = row.query_selector(".js-time")
+        currency_el = row.query_selector(".flagCur")
+        event_el = row.query_selector(".event a")
+        actual_el = row.query_selector(".act")
+        forecast_el = row.query_selector(".fore")
+        previous_el = row.query_selector(".prev")
+        impact_icons = row.query_selector_all(".grayFullBullishIcon")
 
-events = []
+        time = time_el.inner_text().strip() if time_el else ""
+        currency = currency_el.inner_text().strip() if currency_el else ""
+        event = event_el.inner_text().strip() if event_el else ""
+        actual = actual_el.inner_text().strip() if actual_el else ""
+        forecast = forecast_el.inner_text().strip() if forecast_el else ""
+        previous = previous_el.inner_text().strip() if previous_el else ""
+        impact = len(impact_icons)
 
-for row in rows:
-    time_el = row.query_selector(".js-time")
-    currency_el = row.query_selector(".flagCur")
-    event_el = row.query_selector(".event a")  # <a> inside .event
-    actual_el = row.query_selector(".act")
-    forecast_el = row.query_selector(".fore")
-    previous_el = row.query_selector(".prev")
-    impact_icons = row.query_selector_all(".grayFullBullishIcon")
+        if event:
+            events.append({
+                "time": time,
+                "currency": currency,
+                "event": event,
+                "actual": actual,
+                "forecast": forecast,
+                "previous": previous,
+                "impact": impact
+            })
 
-    time = time_el.inner_text().strip() if time_el else ""
-    currency = currency_el.inner_text().strip() if currency_el else ""
-    event = event_el.inner_text().strip() if event_el else ""
-    actual = actual_el.inner_text().strip() if actual_el else ""
-    forecast = forecast_el.inner_text().strip() if forecast_el else ""
-    previous = previous_el.inner_text().strip() if previous_el else ""
-    impact = len(impact_icons)
-
-    if event:  # Only add if event name is valid
-        events.append({
-            "time": time,
-            "currency": currency,
-            "event": event,
-            "actual": actual,
-            "forecast": forecast,
-            "previous": previous,
-            "impact": impact
-        })
-
-        browser.close()
-        return events
+    browser.close()
+    return events
 
 if __name__ == "__main__":
     events = fetch_investing_calendar()
