@@ -8,15 +8,13 @@ def fetch_investing_calendar():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto("https://www.investing.com/economic-calendar/", timeout=120000, wait_until="domcontentloaded")
-        page.wait_for_timeout(5000)  # 5 seconds pause
+        page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=20000)
 
         # Accept cookies if popup appears
         try:
             page.click('button:has-text("I Accept")', timeout=5000)
         except:
             pass
-
-        page.wait_for_selector(".economicCalendar", timeout=15000)
 
         events = []
 
