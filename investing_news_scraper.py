@@ -26,7 +26,8 @@ def fetch_investing_calendar():
             browser.close()
             return []
 
-        rows = page.query_selector_all("table.genTbl.openTbl.ecEconomicTable > tbody > tr")
+        rows = page.query_selector_all("tr.js-event-item")
+        print(f"📊 Found {len(rows)} economic calendar rows using 'tr.js-event-item'")
         print(f"📊 Found {len(rows)} economic calendar rows.")
 
         events = []
