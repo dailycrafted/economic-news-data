@@ -14,7 +14,7 @@ def fetch_investing_calendar():
         # Add this before waiting — it helps debugging
         page.screenshot(path="screenshot_before_wait.png", full_page=True)
         with open("page_before_wait.html", "w", encoding="utf-8") as f:
-        f.write(page.content())
+            f.write(page.content())
         
         page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=60000)
 
