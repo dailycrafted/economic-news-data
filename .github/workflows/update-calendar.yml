@@ -33,3 +33,6 @@ jobs:
       git add news_schedule.json page_debug.html screenshot.png || true
       git commit -m "🛠 Debug output from Investing.com scrape" || true
       git push || true
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
