@@ -11,7 +11,12 @@ def fetch_investing_calendar():
         page = browser.new_page()
         page.goto("https://www.investing.com/economic-calendar/", timeout=60000, wait_until="domcontentloaded")
 
-        page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=20000)
+        # Add this before waiting — it helps debugging
+        page.screenshot(path="screenshot_before_wait.png", full_page=True)
+        with open("page_before_wait.html", "w", encoding="utf-8") as f:
+        f.write(page.content())
+        
+        page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=60000)
 
         rows = page.query_selector_all("tr.js-event-item")
         print(f"📊 Found {len(rows)} economic calendar rows.")
