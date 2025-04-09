@@ -6,10 +6,9 @@ import json
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-utc_time = datetime.utcnow()
-broker_time = utc_time.astimezone(ZoneInfo("Asia/Beirut"))
-
-formatted = broker_time.strftime("%H:%M")
+# Example: convert each event time from UTC to broker time
+today = datetime.utcnow().date()
+broker_timezone = ZoneInfo("Europe/Berlin")  # Replace with your broker's time zone
 
 def fetch_investing_calendar():
     with sync_playwright() as playwright:
@@ -40,11 +39,26 @@ def fetch_investing_calendar():
             forecast = forecast_el.inner_text().strip() if forecast_el else ""
             previous = previous_el.inner_text().strip() if previous_el else ""
             impact = len(impact_icons)
+            
+            try:
+                # Combine date + time string into full datetime
+                event_dt_utc = datetime.strptime(f"{today} {time}", "%Y-%m-%d %H:%M")
+                event_dt_broker = event_dt_utc.astimezone(broker_timezone)
 
+                # Add both formatted and UNIX timestamp
+                broker_time_str = event_dt_broker.strftime("%H:%M")
+                event_timestamp = int(event_dt_broker.timestamp())
+
+            except Exception as e:
+                print("⚠️ Time conversion failed:", e)
+                broker_time_str = ""
+                event_timestamp = 0
+            
             if event and currency in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] and impact >= 2:
                 events.append({
                     "time": time,
-                    "broker_time": formatted,
+                    "broker_time": broker_time_str,  # Converted
+                    "timestamp": event_timestamp,    # For direct comparison in MT5
                     "currency": currency,
                     "event": event,
                     "actual": actual,
