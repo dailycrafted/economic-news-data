@@ -18,7 +18,7 @@
       "timestamp": 1744194600,
       "currency": "USD",
       "event": "Crude Oil Inventories",
-      "actual": "",
+      "actual": "2.553M",
       "forecast": "2.200M",
       "previous": "6.165M",
       "impact": 3
@@ -29,15 +29,15 @@
       "timestamp": 1744194600,
       "currency": "USD",
       "event": "Cushing Crude Oil Inventories",
-      "actual": "",
+      "actual": "0.681M",
       "forecast": "",
       "previous": "2.373M",
       "impact": 2
     },
     {
-      "time": "13:00",
-      "broker_time": "15:00",
-      "timestamp": 1744203600,
+      "time": "25 min",
+      "broker_time": "",
+      "timestamp": 0,
       "currency": "USD",
       "event": "10-Year Note Auction",
       "actual": "",
