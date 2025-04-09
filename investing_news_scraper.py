@@ -16,7 +16,7 @@ def fetch_investing_calendar():
         with open("page_before_wait.html", "w", encoding="utf-8") as f:
             f.write(page.content())
         
-        page.wait_for_selector("table.genTbl.openTbl.ecEconomicTable > tbody > tr", timeout=60000)
+        page.wait_for_selector("tr.js-event-item", timeout=60000)
 
         rows = page.query_selector_all("tr.js-event-item")
         print(f"📊 Found {len(rows)} economic calendar rows.")
