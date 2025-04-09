@@ -1,14 +1,14 @@
-# .github/workflows/update-calendar.yml
-name: Update Investing Calendar
+name: build
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Every day at 6:00 UTC
+    - cron: '0 4 * * *'  # every day at 04:00 UTC
   workflow_dispatch:
 
 jobs:
-  build:
+  scrape-news:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,10 +16,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: 3.10
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install playwright
+          playwright install --with-deps
 
       - name: Run news scraper
         run: python investing_news_scraper.py
@@ -27,7 +29,9 @@ jobs:
       - name: Commit and push news_schedule.json
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.email "github-actions@github.com"
           git add news_schedule.json
-          git commit -m "🔄 Update news_schedule.json from Investing.com" || echo "No changes to commit"
+          git commit -m "Auto-update news_schedule.json"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
