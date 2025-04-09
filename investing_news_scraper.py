@@ -21,7 +21,8 @@ def fetch_investing_calendar():
 
         rows = page.query_selector_all("tr.js-event-item")
         for row in rows:
-            time = row.query_selector(".time")?.inner_text().strip()
+            time_element = row.query_selector(".time")
+            time = time_element.inner_text().strip() if time_element else ""
             currency = row.query_selector(".left flagCur")?.inner_text().strip()
             event_name = row.query_selector(".event")?.inner_text().strip()
             impact = len(row.query_selector_all(".grayFullBullishIcon"))  # 1–3
