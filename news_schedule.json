@@ -1,37 +1,4 @@
-[
-  {
-    "Event": "NFP",
-    "Currency": "USD",
-    "Date": "2025-04-08",
-    "Time": "13:30",
-    "Forecast": 200000
-  },
-  {
-    "Event": "CPI",
-    "Currency": "USD",
-    "Date": "2025-04-10",
-    "Time": "12:30",
-    "Forecast": 3.2
-  },
-  {
-    "Event": "FOMC Rate Decision",
-    "Currency": "USD",
-    "Date": "2025-04-14",
-    "Time": "18:00",
-    "Forecast": 5.5
-  },
-  {
-    "Event": "ECB Rate Decision",
-    "Currency": "EUR",
-    "Date": "2025-04-12",
-    "Time": "12:45",
-    "Forecast": 4.25
-  },
-  {
-    "Event": "BOE Rate Decision",
-    "Currency": "GBP",
-    "Date": "2025-04-11",
-    "Time": "12:00",
-    "Forecast": 4.5
-  }
-]
+{
+  "date": "2025-04-09",
+  "events": []
+}
