@@ -26,12 +26,10 @@ jobs:
       - name: Run news scraper
         run: python investing_news_scraper.py
 
-      - name: Commit and push news_schedule.json
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add news_schedule.json
-          git commit -m "Auto-update news_schedule.json"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       - name: Commit and push debug files
+      run: |
+      git config user.name "github-actions"
+      git config user.email "github-actions@github.com"
+      git add news_schedule.json page_debug.html screenshot.png || true
+      git commit -m "🛠 Debug output from Investing.com scrape" || true
+      git push || true
