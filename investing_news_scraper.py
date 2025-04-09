@@ -10,11 +10,6 @@ def fetch_investing_calendar():
         browser = playwright.chromium.launch()
         page = browser.new_page()
         page.goto("https://www.investing.com/economic-calendar/", timeout=60000, wait_until="domcontentloaded")
-
-        # Add this before waiting — it helps debugging
-        page.screenshot(path="screenshot_before_wait.png", full_page=True)
-        with open("page_before_wait.html", "w", encoding="utf-8") as f:
-            f.write(page.content())
         
         page.wait_for_selector("tr.js-event-item", timeout=60000)
 
