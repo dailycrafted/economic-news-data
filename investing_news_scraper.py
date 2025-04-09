@@ -6,6 +6,7 @@ import json
 from datetime import datetime
 
 def fetch_investing_calendar():
+    with sync_playwright() as playwright:
     browser = playwright.chromium.launch()
     page = browser.new_page()
     page.goto("https://www.investing.com/economic-calendar/", timeout=60000)
