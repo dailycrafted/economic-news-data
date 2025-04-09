@@ -38,10 +38,6 @@ def fetch_investing_calendar():
             forecast = forecast_el.inner_text().strip() if forecast_el else ""
             previous = previous_el.inner_text().strip() if previous_el else ""
             impact = len(impact_icons)
-            
-            # Apply filters (optional): only high/medium impact USD/EUR/GBP/JPY/CAD/AUD/NZD/CHF events
-            if not event or currency not in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] or impact < 2:
-                continue
 
             # Convert to broker time and add timestamp
             try:
@@ -57,6 +53,9 @@ def fetch_investing_calendar():
                 print("⚠️ Time conversion failed:", e)
                 broker_time_str = ""
                 event_timestamp = 0
+                
+                # Apply filters (optional): only high/medium impact USD/EUR/GBP/JPY/CAD/AUD/NZD/CHF events
+                if event and currency in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] and impact >= 2:
                 
                 events.append({
                     "time": time,
