@@ -27,37 +27,37 @@ def fetch_investing_calendar():
             return []
 
         rows = page.query_selector_all("tr.js-event-item")
-        print(f"📊 Found {len(rows)} economic calendar rows using 'tr.js-event-item'")
-        print(f"📊 Found {len(rows)} economic calendar rows.")
+print(f"📊 Found {len(rows)} economic calendar rows.")
 
-        events = []
-        for row in rows:
-            time_el = row.query_selector(".time")
-            currency_el = row.query_selector(".left.flagCur")
-            event_el = row.query_selector(".event")
-            actual_el = row.query_selector(".act")
-            forecast_el = row.query_selector(".fore")
-            previous_el = row.query_selector(".prev")
-            impact_icons = row.query_selector_all(".grayFullBullishIcon")
+events = []
 
-            time = time_el.inner_text().strip() if time_el else ""
-            currency = currency_el.inner_text().strip() if currency_el else ""
-            event = event_el.inner_text().strip() if event_el else ""
-            actual = actual_el.inner_text().strip() if actual_el else ""
-            forecast = forecast_el.inner_text().strip() if forecast_el else ""
-            previous = previous_el.inner_text().strip() if previous_el else ""
-            impact = len(impact_icons)
+for row in rows:
+    time_el = row.query_selector(".js-time")
+    currency_el = row.query_selector(".flagCur")
+    event_el = row.query_selector(".event a")  # <a> inside .event
+    actual_el = row.query_selector(".act")
+    forecast_el = row.query_selector(".fore")
+    previous_el = row.query_selector(".prev")
+    impact_icons = row.query_selector_all(".grayFullBullishIcon")
 
-            if event:
-                events.append({
-                    "time": time,
-                    "currency": currency,
-                    "event": event,
-                    "actual": actual,
-                    "forecast": forecast,
-                    "previous": previous,
-                    "impact": impact
-                })
+    time = time_el.inner_text().strip() if time_el else ""
+    currency = currency_el.inner_text().strip() if currency_el else ""
+    event = event_el.inner_text().strip() if event_el else ""
+    actual = actual_el.inner_text().strip() if actual_el else ""
+    forecast = forecast_el.inner_text().strip() if forecast_el else ""
+    previous = previous_el.inner_text().strip() if previous_el else ""
+    impact = len(impact_icons)
+
+    if event:  # Only add if event name is valid
+        events.append({
+            "time": time,
+            "currency": currency,
+            "event": event,
+            "actual": actual,
+            "forecast": forecast,
+            "previous": previous,
+            "impact": impact
+        })
 
         browser.close()
         return events
