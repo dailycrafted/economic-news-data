@@ -35,7 +35,7 @@ def fetch_investing_calendar():
             previous = previous_el.inner_text().strip() if previous_el else ""
             impact = len(impact_icons)
 
-            if event:
+            if event and currency in ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD", "CHF"] and impact >= 2:
                 events.append({
                     "time": time,
                     "currency": currency,
