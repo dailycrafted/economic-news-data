@@ -1,1 +1,446 @@
-
+{
+  "date": "2025-04-09",
+  "events": [
+    {
+      "time": "00:30",
+      "currency": "INR",
+      "event": "Cash Reserve Ratio",
+      "actual": "4.00%",
+      "forecast": "4.00%",
+      "previous": "4.00%",
+      "impact": 1
+    },
+    {
+      "time": "00:30",
+      "currency": "INR",
+      "event": "Interest Rate Decision",
+      "actual": "6.00%",
+      "forecast": "6.00%",
+      "previous": "6.25%",
+      "impact": 2
+    },
+    {
+      "time": "00:30",
+      "currency": "INR",
+      "event": "Reverse REPO Rate",
+      "actual": "3.35%",
+      "forecast": "",
+      "previous": "3.35%",
+      "impact": 1
+    },
+    {
+      "time": "00:30",
+      "currency": "INR",
+      "event": "RBI MPC Meeting Minutes",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "01:00",
+      "currency": "JPY",
+      "event": "Household Confidence (Mar)",
+      "actual": "34.1",
+      "forecast": "34.7",
+      "previous": "34.8",
+      "impact": 1
+    },
+    {
+      "time": "02:00",
+      "currency": "JPY",
+      "event": "Machine Tool Orders (YoY) (Mar)",
+      "actual": "11.4%",
+      "forecast": "",
+      "previous": "3.5%",
+      "impact": 1
+    },
+    {
+      "time": "4 min",
+      "currency": "JPY",
+      "event": "BOJ Gov Ueda Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 1
+    },
+    {
+      "time": "05:00",
+      "currency": "GBP",
+      "event": "5-Year Treasury Gilt Auction",
+      "actual": "",
+      "forecast": "",
+      "previous": "4.311%",
+      "impact": 1
+    },
+    {
+      "time": "05:25",
+      "currency": "EUR",
+      "event": "German Buba Balz Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "05:30",
+      "currency": "GBP",
+      "event": "BoE FPC Meeting Minutes",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 1
+    },
+    {
+      "time": "07:00",
+      "currency": "USD",
+      "event": "MBA 30-Year Mortgage Rate",
+      "actual": "",
+      "forecast": "",
+      "previous": "6.70%",
+      "impact": 1
+    },
+    {
+      "time": "07:00",
+      "currency": "USD",
+      "event": "MBA Mortgage Applications (WoW)",
+      "actual": "",
+      "forecast": "",
+      "previous": "-1.6%",
+      "impact": 1
+    },
+    {
+      "time": "07:00",
+      "currency": "USD",
+      "event": "MBA Purchase Index",
+      "actual": "",
+      "forecast": "",
+      "previous": "158.2",
+      "impact": 1
+    },
+    {
+      "time": "07:00",
+      "currency": "USD",
+      "event": "Mortgage Market Index",
+      "actual": "",
+      "forecast": "",
+      "previous": "243.6",
+      "impact": 1
+    },
+    {
+      "time": "07:00",
+      "currency": "USD",
+      "event": "Mortgage Refinance Index",
+      "actual": "",
+      "forecast": "",
+      "previous": "710.4",
+      "impact": 1
+    },
+    {
+      "time": "07:30",
+      "currency": "BRL",
+      "event": "Bank lending (MoM) (Feb)",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.0%",
+      "impact": 1
+    },
+    {
+      "time": "08:00",
+      "currency": "BRL",
+      "event": "Brazilian PPI (MoM) (Feb)",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.13%",
+      "impact": 1
+    },
+    {
+      "time": "08:00",
+      "currency": "BRL",
+      "event": "Retail Sales (MoM) (Feb)",
+      "actual": "",
+      "forecast": "0.5%",
+      "previous": "-0.1%",
+      "impact": 2
+    },
+    {
+      "time": "08:00",
+      "currency": "BRL",
+      "event": "Retail Sales (YoY) (Feb)",
+      "actual": "",
+      "forecast": "1.6%",
+      "previous": "3.1%",
+      "impact": 2
+    },
+    {
+      "time": "10:00",
+      "currency": "USD",
+      "event": "Wholesale Inventories (MoM) (Feb)",
+      "actual": "",
+      "forecast": "0.3%",
+      "previous": "0.8%",
+      "impact": 1
+    },
+    {
+      "time": "10:00",
+      "currency": "USD",
+      "event": "Wholesale Trade Sales (MoM) (Feb)",
+      "actual": "",
+      "forecast": "",
+      "previous": "-1.3%",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Crude Oil Inventories",
+      "actual": "",
+      "forecast": "2.200M",
+      "previous": "6.165M",
+      "impact": 3
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "EIA Refinery Crude Runs (WoW)",
+      "actual": "",
+      "forecast": "",
+      "previous": "-0.192M",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Crude Oil Imports",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.999M",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Cushing Crude Oil Inventories",
+      "actual": "",
+      "forecast": "",
+      "previous": "2.373M",
+      "impact": 2
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Distillate Fuel Production",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.164M",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "EIA Weekly Distillates Stocks",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.264M",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Gasoline Production",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.062M",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Heating Oil Stockpiles",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.209M",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "EIA Weekly Refinery Utilization Rates (WoW)",
+      "actual": "",
+      "forecast": "",
+      "previous": "-1.0%",
+      "impact": 1
+    },
+    {
+      "time": "10:30",
+      "currency": "USD",
+      "event": "Gasoline Inventories",
+      "actual": "",
+      "forecast": "",
+      "previous": "-1.551M",
+      "impact": 1
+    },
+    {
+      "time": "11:00",
+      "currency": "USD",
+      "event": "Thomson Reuters IPSOS PCSI (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "54.02",
+      "impact": 1
+    },
+    {
+      "time": "11:00",
+      "currency": "CAD",
+      "event": "Thomson Reuters IPSOS PCSI (MoM) (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "45.47",
+      "impact": 1
+    },
+    {
+      "time": "11:00",
+      "currency": "BRL",
+      "event": "Brazil Thomson Reuters IPSOS PCSI (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "49.07",
+      "impact": 1
+    },
+    {
+      "time": "12:00",
+      "currency": "RUB",
+      "event": "GDP Quarterly (YoY) (Q4)",
+      "actual": "",
+      "forecast": "",
+      "previous": "3.1%",
+      "impact": 2
+    },
+    {
+      "time": "12:30",
+      "currency": "USD",
+      "event": "FOMC Member Barkin Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 1
+    },
+    {
+      "time": "13:00",
+      "currency": "USD",
+      "event": "10-Year Note Auction",
+      "actual": "",
+      "forecast": "",
+      "previous": "4.310%",
+      "impact": 3
+    },
+    {
+      "time": "13:30",
+      "currency": "BRL",
+      "event": "Foreign Exchange Flows",
+      "actual": "",
+      "forecast": "",
+      "previous": "-2.085B",
+      "impact": 1
+    },
+    {
+      "time": "14:00",
+      "currency": "USD",
+      "event": "FOMC Meeting Minutes",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 3
+    },
+    {
+      "time": "19:50",
+      "currency": "JPY",
+      "event": "Bank Lending (YoY) (Mar)",
+      "actual": "",
+      "forecast": "3.1%",
+      "previous": "3.1%",
+      "impact": 1
+    },
+    {
+      "time": "19:50",
+      "currency": "JPY",
+      "event": "Foreign Bonds Buying",
+      "actual": "",
+      "forecast": "",
+      "previous": "-5.9B",
+      "impact": 1
+    },
+    {
+      "time": "19:50",
+      "currency": "JPY",
+      "event": "Foreign Investments in Japanese Stocks",
+      "actual": "",
+      "forecast": "",
+      "previous": "-450.4B",
+      "impact": 1
+    },
+    {
+      "time": "19:50",
+      "currency": "JPY",
+      "event": "PPI (MoM) (Mar)",
+      "actual": "",
+      "forecast": "0.2%",
+      "previous": "0.0%",
+      "impact": 1
+    },
+    {
+      "time": "19:50",
+      "currency": "JPY",
+      "event": "PPI (YoY) (Mar)",
+      "actual": "",
+      "forecast": "3.9%",
+      "previous": "4.0%",
+      "impact": 1
+    },
+    {
+      "time": "21:00",
+      "currency": "AUD",
+      "event": "MI Inflation Expectations (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "3.6%",
+      "impact": 1
+    },
+    {
+      "time": "21:30",
+      "currency": "CNY",
+      "event": "CPI (MoM) (Mar)",
+      "actual": "",
+      "forecast": "",
+      "previous": "-0.2%",
+      "impact": 2
+    },
+    {
+      "time": "21:30",
+      "currency": "CNY",
+      "event": "CPI (YoY) (Mar)",
+      "actual": "",
+      "forecast": "0.1%",
+      "previous": "-0.7%",
+      "impact": 2
+    },
+    {
+      "time": "21:30",
+      "currency": "CNY",
+      "event": "PPI (YoY) (Mar)",
+      "actual": "",
+      "forecast": "-2.3%",
+      "previous": "-2.2%",
+      "impact": 2
+    },
+    {
+      "time": "23:35",
+      "currency": "JPY",
+      "event": "5-Year JGB Auction",
+      "actual": "",
+      "forecast": "",
+      "previous": "1.157%",
+      "impact": 1
+    }
+  ]
+}
