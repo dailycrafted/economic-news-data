@@ -40,9 +40,9 @@
       "timestamp": 1744273800,
       "currency": "USD",
       "event": "Continuing Jobless Claims",
-      "actual": "",
+      "actual": "1,850K",
       "forecast": "1,880K",
-      "previous": "1,903K",
+      "previous": "1,893K",
       "impact": 2
     },
     {
@@ -50,19 +50,8 @@
       "broker_time": "10:30",
       "timestamp": 1744273800,
       "currency": "USD",
-      "event": "Core CPI (MoM) (Mar)",
-      "actual": "",
-      "forecast": "0.3%",
-      "previous": "0.2%",
-      "impact": 3
-    },
-    {
-      "time": "08:30",
-      "broker_time": "10:30",
-      "timestamp": 1744273800,
-      "currency": "USD",
       "event": "Core CPI (YoY) (Mar)",
-      "actual": "",
+      "actual": "2.8%",
       "forecast": "3.0%",
       "previous": "3.1%",
       "impact": 2
@@ -72,8 +61,19 @@
       "broker_time": "10:30",
       "timestamp": 1744273800,
       "currency": "USD",
+      "event": "Core CPI (MoM) (Mar)",
+      "actual": "0.1%",
+      "forecast": "0.3%",
+      "previous": "0.2%",
+      "impact": 3
+    },
+    {
+      "time": "08:30",
+      "broker_time": "10:30",
+      "timestamp": 1744273800,
+      "currency": "USD",
       "event": "CPI (MoM) (Mar)",
-      "actual": "",
+      "actual": "-0.1%",
       "forecast": "0.1%",
       "previous": "0.2%",
       "impact": 3
@@ -84,7 +84,7 @@
       "timestamp": 1744273800,
       "currency": "USD",
       "event": "CPI (YoY) (Mar)",
-      "actual": "",
+      "actual": "2.4%",
       "forecast": "2.5%",
       "previous": "2.8%",
       "impact": 3
@@ -95,7 +95,7 @@
       "timestamp": 1744273800,
       "currency": "USD",
       "event": "Initial Jobless Claims",
-      "actual": "",
+      "actual": "223K",
       "forecast": "223K",
       "previous": "219K",
       "impact": 3
@@ -106,9 +106,9 @@
       "timestamp": 1744273800,
       "currency": "CAD",
       "event": "Building Permits (MoM) (Feb)",
-      "actual": "",
+      "actual": "2.9%",
       "forecast": "-0.4%",
-      "previous": "-3.2%",
+      "previous": "-4.3%",
       "impact": 2
     },
     {
@@ -150,7 +150,7 @@
       "timestamp": 1744290000,
       "currency": "USD",
       "event": "30-Year Bond Auction",
-      "actual": "",
+      "actual": "4.813%",
       "forecast": "",
       "previous": "4.623%",
       "impact": 3
@@ -161,7 +161,7 @@
       "timestamp": 1744293600,
       "currency": "USD",
       "event": "Federal Budget Balance (Mar)",
-      "actual": "",
+      "actual": "-161.0B",
       "forecast": "-115.9B",
       "previous": "-307.0B",
       "impact": 2
@@ -172,7 +172,7 @@
       "timestamp": 1744302600,
       "currency": "USD",
       "event": "Fed's Balance Sheet",
-      "actual": "",
+      "actual": "6,727B",
       "forecast": "",
       "previous": "6,723B",
       "impact": 2
