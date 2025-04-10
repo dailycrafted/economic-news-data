@@ -2,9 +2,13 @@ name: Update Investing Calendar
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Every day at 04:00 UTC
+    - cron: '0 21 * * *'  # Every day at 21:00 UTC
+    # - cron: '0 4 * * *'  # Every day at 04:00 UTC
     # - cron: '0 */6 * * *'  # Every 6 hours
     # - cron: '0 * * * *'  # Every hour
+    # - cron: '30 2 * * *'  # Every day at 02:30 UTC
+    # - cron: '0 12 * * 1-5'  # Weekdays only at 12:00 UTC
+    # - cron: '0 0 * * *'  # Every day at 00:00 UTC
   workflow_dispatch:
 
 jobs:
