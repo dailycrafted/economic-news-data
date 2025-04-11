@@ -50,22 +50,22 @@
       "broker_time": "10:30",
       "timestamp": 1744360200,
       "currency": "USD",
-      "event": "Core CPI (MoM) (Mar)",
-      "actual": "0.1%",
-      "forecast": "0.3%",
-      "previous": "0.2%",
-      "impact": 3
+      "event": "Core CPI (YoY) (Mar)",
+      "actual": "2.8%",
+      "forecast": "3.0%",
+      "previous": "3.1%",
+      "impact": 2
     },
     {
       "time": "08:30",
       "broker_time": "10:30",
       "timestamp": 1744360200,
       "currency": "USD",
-      "event": "Core CPI (YoY) (Mar)",
-      "actual": "2.8%",
-      "forecast": "3.0%",
-      "previous": "3.1%",
-      "impact": 2
+      "event": "Core CPI (MoM) (Mar)",
+      "actual": "0.1%",
+      "forecast": "0.3%",
+      "previous": "0.2%",
+      "impact": 3
     },
     {
       "time": "08:30",
