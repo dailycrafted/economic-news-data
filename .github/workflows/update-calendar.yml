@@ -2,7 +2,8 @@ name: Update Investing Calendar
 
 on:
   schedule:
-    - cron: '0 21 * * *'  # Every day at 21:00 UTC
+    - cron: '1/15 * * * *' # Every 15 minutes, starting at 1 minute past the hour
+    # - cron: '0 21 * * *'  # Every day at 21:00 UTC
     # - cron: '0 4 * * *'  # Every day at 04:00 UTC
     # - cron: '0 */6 * * *'  # Every 6 hours
     # - cron: '0 * * * *'  # Every hour
