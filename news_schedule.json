@@ -1,15 +1,15 @@
 {
-  "date": "2025-04-12",
+  "date": "2025-04-13",
   "events": [
     {
-      "time": "06:00",
-      "broker_time": "08:00",
-      "timestamp": 1744437600,
-      "currency": "EUR",
-      "event": "Eurogroup Meetings",
+      "time": "18:45",
+      "broker_time": "20:45",
+      "timestamp": 1744569900,
+      "currency": "NZD",
+      "event": "Electronic Card Retail Sales (MoM) (Mar)",
       "actual": "",
       "forecast": "",
-      "previous": "",
+      "previous": "0.3%",
       "impact": 2
     }
   ]
