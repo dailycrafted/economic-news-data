@@ -1,15 +1,114 @@
 {
-  "date": "2025-04-13",
+  "date": "2025-04-14",
   "events": [
     {
-      "time": "18:45",
-      "broker_time": "20:45",
-      "timestamp": 1744569900,
-      "currency": "NZD",
-      "event": "Electronic Card Retail Sales (MoM) (Mar)",
+      "time": "00:30",
+      "broker_time": "02:30",
+      "timestamp": 1744590600,
+      "currency": "JPY",
+      "event": "Industrial Production (MoM) (Feb)",
+      "actual": "2.3%",
+      "forecast": "2.5%",
+      "previous": "-1.1%",
+      "impact": 2
+    },
+    {
+      "time": "02:30",
+      "broker_time": "04:30",
+      "timestamp": 1744597800,
+      "currency": "CHF",
+      "event": "PPI (MoM) (Mar)",
+      "actual": "",
+      "forecast": "0.2%",
+      "previous": "0.3%",
+      "impact": 2
+    },
+    {
+      "time": "07:00",
+      "broker_time": "09:00",
+      "timestamp": 1744614000,
+      "currency": "USD",
+      "event": "OPEC Monthly Report",
       "actual": "",
       "forecast": "",
-      "previous": "0.3%",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "08:30",
+      "broker_time": "10:30",
+      "timestamp": 1744619400,
+      "currency": "CAD",
+      "event": "Wholesale Sales (MoM) (Feb)",
+      "actual": "",
+      "forecast": "0.4%",
+      "previous": "1.2%",
+      "impact": 2
+    },
+    {
+      "time": "11:00",
+      "broker_time": "13:00",
+      "timestamp": 1744628400,
+      "currency": "USD",
+      "event": "NY Fed 1-Year Consumer Inflation Expectations (Mar)",
+      "actual": "",
+      "forecast": "",
+      "previous": "3.1%",
+      "impact": 2
+    },
+    {
+      "time": "13:00",
+      "broker_time": "15:00",
+      "timestamp": 1744635600,
+      "currency": "USD",
+      "event": "Fed Waller Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "18:00",
+      "broker_time": "20:00",
+      "timestamp": 1744653600,
+      "currency": "USD",
+      "event": "FOMC Member Harker Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "19:01",
+      "broker_time": "21:01",
+      "timestamp": 1744657260,
+      "currency": "GBP",
+      "event": "BRC Retail Sales Monitor (YoY) (Mar)",
+      "actual": "",
+      "forecast": "0.7%",
+      "previous": "0.9%",
+      "impact": 2
+    },
+    {
+      "time": "19:40",
+      "broker_time": "21:40",
+      "timestamp": 1744659600,
+      "currency": "USD",
+      "event": "FOMC Member Bostic Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "21:30",
+      "broker_time": "23:30",
+      "timestamp": 1744666200,
+      "currency": "AUD",
+      "event": "RBA Meeting Minutes",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
       "impact": 2
     }
   ]
