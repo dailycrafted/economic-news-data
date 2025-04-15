@@ -1,5 +1,5 @@
 
-name: Update Historical Economic Events
+name: Update Historical Economic Events with Screenshots
 
 on:
   workflow_dispatch:
