@@ -1,5 +1,5 @@
 
-name: Update Historical Economic Events
+name: Update Historical Economic Events with Screenshots
 
 on:
   workflow_dispatch:
@@ -28,7 +28,7 @@ jobs:
         run: python all_event_history_scraper_debug.py
 
       - name: 💾 Upload screenshots as artifacts
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@6b64353789b092b1f9b837cb1c624b6e44c13cd1
         with:
           name: investing-event-screenshots
           path: |
