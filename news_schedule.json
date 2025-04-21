@@ -1,4 +1,16 @@
 {
-  "date": "2025-04-20",
-  "events": []
+  "date": "2025-04-21",
+  "events": [
+    {
+      "time": "10:00",
+      "broker_time": "12:00",
+      "timestamp": 1745229600,
+      "currency": "USD",
+      "event": "US Leading Index (MoM) (Mar)",
+      "actual": "",
+      "forecast": "-0.5%",
+      "previous": "-0.3%",
+      "impact": 2
+    }
+  ]
 }
