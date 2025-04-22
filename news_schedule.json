@@ -1,15 +1,103 @@
 {
-  "date": "2025-04-21",
+  "date": "2025-04-22",
   "events": [
+    {
+      "time": "16 min",
+      "broker_time": "",
+      "timestamp": 0,
+      "currency": "JPY",
+      "event": "BoJ Core CPI (YoY)",
+      "actual": "",
+      "forecast": "2.4%",
+      "previous": "2.2%",
+      "impact": 2
+    },
+    {
+      "time": "08:30",
+      "broker_time": "10:30",
+      "timestamp": 1745310600,
+      "currency": "CAD",
+      "event": "RMPI (MoM) (Mar)",
+      "actual": "",
+      "forecast": "0.0%",
+      "previous": "0.3%",
+      "impact": 2
+    },
+    {
+      "time": "09:30",
+      "broker_time": "11:30",
+      "timestamp": 1745314200,
+      "currency": "USD",
+      "event": "FOMC Member Harker Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
     {
       "time": "10:00",
       "broker_time": "12:00",
-      "timestamp": 1745229600,
-      "currency": "USD",
-      "event": "US Leading Index (MoM) (Mar)",
+      "timestamp": 1745316000,
+      "currency": "EUR",
+      "event": "ECB President Lagarde Speaks",
       "actual": "",
-      "forecast": "-0.5%",
-      "previous": "-0.3%",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "13:00",
+      "broker_time": "15:00",
+      "timestamp": 1745326800,
+      "currency": "USD",
+      "event": "2-Year Note Auction",
+      "actual": "",
+      "forecast": "",
+      "previous": "3.984%",
+      "impact": 2
+    },
+    {
+      "time": "13:00",
+      "broker_time": "15:00",
+      "timestamp": 1745326800,
+      "currency": "EUR",
+      "event": "ECB's De Guindos Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "14:00",
+      "broker_time": "16:00",
+      "timestamp": 1745330400,
+      "currency": "USD",
+      "event": "FOMC Member Kashkari Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "16:30",
+      "broker_time": "18:30",
+      "timestamp": 1745339400,
+      "currency": "USD",
+      "event": "API Weekly Crude Oil Stock",
+      "actual": "",
+      "forecast": "",
+      "previous": "2.400M",
+      "impact": 2
+    },
+    {
+      "time": "20:30",
+      "broker_time": "22:30",
+      "timestamp": 1745353800,
+      "currency": "JPY",
+      "event": "au Jibun Bank Services PMI (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "50.0",
       "impact": 2
     }
   ]
