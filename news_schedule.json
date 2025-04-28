@@ -1,10 +1,10 @@
 {
-  "date": "2025-04-27",
+  "date": "2025-04-28",
   "events": [
     {
       "time": "06:00",
       "broker_time": "08:00",
-      "timestamp": 1745733600,
+      "timestamp": 1745820000,
       "currency": "EUR",
       "event": "France Jobseekers Total (Mar)",
       "actual": "",
@@ -15,7 +15,7 @@
     {
       "time": "08:00",
       "broker_time": "10:00",
-      "timestamp": 1745740800,
+      "timestamp": 1745827200,
       "currency": "CAD",
       "event": "Canadian Federal Election",
       "actual": "",
@@ -26,7 +26,7 @@
     {
       "time": "08:30",
       "broker_time": "10:30",
-      "timestamp": 1745742600,
+      "timestamp": 1745829000,
       "currency": "CAD",
       "event": "Wholesale Sales (MoM) (Mar)",
       "actual": "",
@@ -37,7 +37,7 @@
     {
       "time": "09:00",
       "broker_time": "11:00",
-      "timestamp": 1745744400,
+      "timestamp": 1745830800,
       "currency": "EUR",
       "event": "ECB's De Guindos Speaks",
       "actual": "",
@@ -48,7 +48,7 @@
     {
       "time": "12:00",
       "broker_time": "14:00",
-      "timestamp": 1745755200,
+      "timestamp": 1745841600,
       "currency": "EUR",
       "event": "German Buba Mauderer Speaks",
       "actual": "",
@@ -59,7 +59,7 @@
     {
       "time": "22:05",
       "broker_time": "00:05",
-      "timestamp": 1745791500,
+      "timestamp": 1745877900,
       "currency": "AUD",
       "event": "RBA Assist Gov Kent Speaks",
       "actual": "",
