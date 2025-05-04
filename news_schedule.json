@@ -1,16 +1,4 @@
 {
-  "date": "2025-05-03",
-  "events": [
-    {
-      "time": "06:00",
-      "broker_time": "08:00",
-      "timestamp": 1746252000,
-      "currency": "USD",
-      "event": "OPEC Meeting",
-      "actual": "",
-      "forecast": "",
-      "previous": "",
-      "impact": 2
-    }
-  ]
+  "date": "2025-05-04",
+  "events": []
 }
