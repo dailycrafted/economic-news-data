@@ -1,4 +1,115 @@
 {
-  "date": "2025-05-04",
-  "events": []
+  "date": "2025-05-05",
+  "events": [
+    {
+      "time": "02:30",
+      "broker_time": "04:30",
+      "timestamp": 1746412200,
+      "currency": "CHF",
+      "event": "CPI (MoM) (Apr)",
+      "actual": "",
+      "forecast": "0.2%",
+      "previous": "0.0%",
+      "impact": 2
+    },
+    {
+      "time": "09:45",
+      "broker_time": "11:45",
+      "timestamp": 1746438300,
+      "currency": "USD",
+      "event": "S&P Global Composite PMI (Apr)",
+      "actual": "",
+      "forecast": "51.2",
+      "previous": "53.5",
+      "impact": 2
+    },
+    {
+      "time": "09:45",
+      "broker_time": "11:45",
+      "timestamp": 1746438300,
+      "currency": "USD",
+      "event": "S&P Global Services PMI (Apr)",
+      "actual": "",
+      "forecast": "51.4",
+      "previous": "54.4",
+      "impact": 3
+    },
+    {
+      "time": "10:00",
+      "broker_time": "12:00",
+      "timestamp": 1746439200,
+      "currency": "USD",
+      "event": "ISM Non-Manufacturing Employment (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "46.2",
+      "impact": 2
+    },
+    {
+      "time": "10:00",
+      "broker_time": "12:00",
+      "timestamp": 1746439200,
+      "currency": "USD",
+      "event": "ISM Non-Manufacturing PMI (Apr)",
+      "actual": "",
+      "forecast": "50.6",
+      "previous": "50.8",
+      "impact": 3
+    },
+    {
+      "time": "10:00",
+      "broker_time": "12:00",
+      "timestamp": 1746439200,
+      "currency": "USD",
+      "event": "ISM Non-Manufacturing Prices (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "60.9",
+      "impact": 3
+    },
+    {
+      "time": "11:00",
+      "broker_time": "13:00",
+      "timestamp": 1746442800,
+      "currency": "EUR",
+      "event": "German Buba Mauderer Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "13:00",
+      "broker_time": "15:00",
+      "timestamp": 1746450000,
+      "currency": "USD",
+      "event": "3-Year Note Auction",
+      "actual": "",
+      "forecast": "",
+      "previous": "3.784%",
+      "impact": 2
+    },
+    {
+      "time": "19:01",
+      "broker_time": "21:01",
+      "timestamp": 1746471660,
+      "currency": "GBP",
+      "event": "BRC Retail Sales Monitor (YoY)",
+      "actual": "",
+      "forecast": "",
+      "previous": "0.9%",
+      "impact": 2
+    },
+    {
+      "time": "21:30",
+      "broker_time": "23:30",
+      "timestamp": 1746480600,
+      "currency": "AUD",
+      "event": "Building Approvals (MoM) (Mar)",
+      "actual": "",
+      "forecast": "-1.7%",
+      "previous": "-0.3%",
+      "impact": 2
+    }
+  ]
 }
