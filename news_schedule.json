@@ -1,10 +1,10 @@
 {
-  "date": "2025-05-10",
+  "date": "2025-05-11",
   "events": [
     {
       "time": "19:50",
       "broker_time": "21:50",
-      "timestamp": 1746906600,
+      "timestamp": 1746993000,
       "currency": "JPY",
       "event": "Adjusted Current Account (Mar)",
       "actual": "",
@@ -15,7 +15,7 @@
     {
       "time": "19:50",
       "broker_time": "21:50",
-      "timestamp": 1746906600,
+      "timestamp": 1746993000,
       "currency": "JPY",
       "event": "Current Account n.s.a. (Mar)",
       "actual": "",
