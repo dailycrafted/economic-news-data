@@ -1,26 +1,92 @@
 {
-  "date": "2025-05-11",
+  "date": "2025-05-12",
   "events": [
     {
-      "time": "19:50",
-      "broker_time": "21:50",
-      "timestamp": 1746993000,
-      "currency": "JPY",
-      "event": "Adjusted Current Account (Mar)",
+      "time": "06:00",
+      "broker_time": "08:00",
+      "timestamp": 1747029600,
+      "currency": "EUR",
+      "event": "Eurogroup Meetings",
       "actual": "",
       "forecast": "",
-      "previous": "2.32T",
+      "previous": "",
       "impact": 2
     },
     {
-      "time": "19:50",
-      "broker_time": "21:50",
-      "timestamp": 1746993000,
-      "currency": "JPY",
-      "event": "Current Account n.s.a. (Mar)",
+      "time": "08:50",
+      "broker_time": "10:50",
+      "timestamp": 1747039800,
+      "currency": "GBP",
+      "event": "BoE MPC Member Mann Speaks",
       "actual": "",
-      "forecast": "3.678T",
-      "previous": "4.061T",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "11:00",
+      "broker_time": "13:00",
+      "timestamp": 1747047600,
+      "currency": "EUR",
+      "event": "German Buba Vice President Buch Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "12:00",
+      "broker_time": "14:00",
+      "timestamp": 1747051200,
+      "currency": "USD",
+      "event": "WASDE Report",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "14:00",
+      "broker_time": "16:00",
+      "timestamp": 1747058400,
+      "currency": "USD",
+      "event": "Federal Budget Balance (Apr)",
+      "actual": "",
+      "forecast": "256.4B",
+      "previous": "-161.0B",
+      "impact": 2
+    },
+    {
+      "time": "19:01",
+      "broker_time": "21:01",
+      "timestamp": 1747076460,
+      "currency": "GBP",
+      "event": "BRC Retail Sales Monitor (YoY) (Apr)",
+      "actual": "",
+      "forecast": "2.4%",
+      "previous": "0.9%",
+      "impact": 2
+    },
+    {
+      "time": "21:30",
+      "broker_time": "23:30",
+      "timestamp": 1747085400,
+      "currency": "AUD",
+      "event": "Building Approvals (MoM) (Mar)",
+      "actual": "",
+      "forecast": "-8.8%",
+      "previous": "-0.3%",
+      "impact": 2
+    },
+    {
+      "time": "21:30",
+      "broker_time": "23:30",
+      "timestamp": 1747085400,
+      "currency": "AUD",
+      "event": "NAB Business Confidence (Apr)",
+      "actual": "",
+      "forecast": "",
+      "previous": "-3",
       "impact": 2
     }
   ]
