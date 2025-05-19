@@ -1,10 +1,54 @@
 {
-  "date": "2025-05-18",
+  "date": "2025-05-19",
   "events": [
     {
-      "time": "17:20",
-      "broker_time": "19:20",
-      "timestamp": 1747588800,
+      "time": "05:00",
+      "broker_time": "07:00",
+      "timestamp": 1747630800,
+      "currency": "EUR",
+      "event": "Core CPI (YoY) (Apr)",
+      "actual": "",
+      "forecast": "2.7%",
+      "previous": "2.4%",
+      "impact": 2
+    },
+    {
+      "time": "05:00",
+      "broker_time": "07:00",
+      "timestamp": 1747630800,
+      "currency": "EUR",
+      "event": "CPI (YoY) (Apr)",
+      "actual": "",
+      "forecast": "2.2%",
+      "previous": "2.2%",
+      "impact": 3
+    },
+    {
+      "time": "05:00",
+      "broker_time": "07:00",
+      "timestamp": 1747630800,
+      "currency": "EUR",
+      "event": "CPI (MoM) (Apr)",
+      "actual": "",
+      "forecast": "0.6%",
+      "previous": "0.6%",
+      "impact": 2
+    },
+    {
+      "time": "08:30",
+      "broker_time": "10:30",
+      "timestamp": 1747643400,
+      "currency": "USD",
+      "event": "FOMC Member Bostic Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
+    },
+    {
+      "time": "08:30",
+      "broker_time": "10:30",
+      "timestamp": 1747643400,
       "currency": "USD",
       "event": "FOMC Member Williams Speaks",
       "actual": "",
@@ -13,14 +57,25 @@
       "impact": 2
     },
     {
-      "time": "18:45",
-      "broker_time": "20:45",
-      "timestamp": 1747593900,
-      "currency": "NZD",
-      "event": "PPI Input (QoQ) (Q1)",
+      "time": "10:00",
+      "broker_time": "12:00",
+      "timestamp": 1747648800,
+      "currency": "USD",
+      "event": "US Leading Index (MoM) (Apr)",
+      "actual": "",
+      "forecast": "-0.7%",
+      "previous": "-0.7%",
+      "impact": 2
+    },
+    {
+      "time": "13:30",
+      "broker_time": "15:30",
+      "timestamp": 1747661400,
+      "currency": "USD",
+      "event": "FOMC Member Kashkari Speaks",
       "actual": "",
       "forecast": "",
-      "previous": "-0.9%",
+      "previous": "",
       "impact": 2
     }
   ]
