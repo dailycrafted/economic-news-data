@@ -1,10 +1,10 @@
 {
-  "date": "2025-05-24",
+  "date": "2025-05-25",
   "events": [
     {
       "time": "14:40",
       "broker_time": "16:40",
-      "timestamp": 1748097600,
+      "timestamp": 1748184000,
       "currency": "USD",
       "event": "Fed Chair Powell Speaks",
       "actual": "",
