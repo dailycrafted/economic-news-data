@@ -1,16 +1,38 @@
 {
-  "date": "2025-05-25",
+  "date": "2025-05-26",
   "events": [
     {
-      "time": "14:40",
-      "broker_time": "16:40",
-      "timestamp": 1748184000,
-      "currency": "USD",
-      "event": "Fed Chair Powell Speaks",
+      "time": "02:30",
+      "broker_time": "04:30",
+      "timestamp": 1748226600,
+      "currency": "CHF",
+      "event": "Employment Level (Q1)",
+      "actual": "",
+      "forecast": "",
+      "previous": "5.534M",
+      "impact": 2
+    },
+    {
+      "time": "09:30",
+      "broker_time": "11:30",
+      "timestamp": 1748251800,
+      "currency": "EUR",
+      "event": "German Buba President Nagel Speaks",
       "actual": "",
       "forecast": "",
       "previous": "",
-      "impact": 3
+      "impact": 2
+    },
+    {
+      "time": "10:30",
+      "broker_time": "12:30",
+      "timestamp": 1748255400,
+      "currency": "EUR",
+      "event": "ECB President Lagarde Speaks",
+      "actual": "",
+      "forecast": "",
+      "previous": "",
+      "impact": 2
     }
   ]
 }
